@@ -22,29 +22,36 @@
          <span></span>
          <span></span>
           <!-- Formulario de envío de correos -->
-       <div class="content">
-         <h1>Enviar Email</h1>
-         <div class="container">
-           <form action="#" id="formulario">
-             <div class="form email">
-               <label for="email">Email:</label>
-               <input id="email" type="email"  placeholder="mrk@ejemplo.com">
-             </div>
-             <div class="form asunto">
-               <label for="asunto">Asunto:</label>
-               <input id="asunto" type="text" placeholder="Asunto del Email">
-             </div>
-             <div class="form mensaje">
-               <label for="mensaje">Mensaje:</label>
-               <textarea id="mensaje" placeholder="Describe tus inquietudes..." maxlength="199" rows="6"></textarea>
-             </div>
-             <div class="btn">
-               <button type="submit" class="enviar">Enviar</button>
-               <button type="reset" class="resetear">Resetear</button>
-             </div>
-           </form>
-         </div>
-       </div>
+        <div class="content">
+          <h1>Enviar Email</h1>
+          <div class="aside">
+            <form action="#" id="formulario">
+                <div class="form email">
+                  <label for="email">Email:</label>
+                  <input id="email" type="email"  name="email" placeholder="mrk@ejemplo.com">
+                </div>
+                <div class="form asunto">
+                  <label for="asunto">Asunto:</label>
+                  <input id="asunto" type="text" name="asunto" placeholder="Asunto del Email">
+                </div>
+                <div class="form mensaje">
+                  <label for="mensaje">Mensaje:</label>
+                  <textarea id="mensaje" type="text" name="mensaje" placeholder="Describe tus inquietudes..." maxlength="199" rows="6"></textarea>
+                </div>
+                <div class="btn">
+                  <button type="submit" class="enviar" disabled>Enviar</button>
+                  <button type="reset" class="resetear">Resetear</button>
+              </div>
+            </form>
+
+            <div id="spinner" class="content__spinner hidden">
+              <div class="spinner">
+                 <div class="cube1"></div>
+                 <div class="cube2"></div>
+              </div>
+            </div>           
+          </div>
+        </div>
       </section>
    </div>  
    <script src="script.js"></script> 

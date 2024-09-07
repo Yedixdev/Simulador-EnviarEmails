@@ -225,6 +225,12 @@ textarea:focus {
 
 .enviar {
    background-color: rgb(234, 192, 39, 0.9);
+   transition: opacity 0.3s ease;
+}
+
+.enviar:disabled {
+   opacity: 0.7;
+   cursor: not-allowed;
 }
 
 .enviar:hover {
@@ -249,5 +255,56 @@ textarea:focus {
 
    .btn button {
       flex-direction: column;
+   }
+}
+
+/*----------------------Spinner------------------*/
+
+.hidden {
+   display: none;
+}
+
+.flex {
+   display: flex;
+   justify-content: center;
+}
+
+.spinner {
+   margin: 100px auto;
+   width: 10px;
+   height: 10px;
+   position: relative;
+}
+
+.cube1,
+.cube2 {
+   background-color: rgba(234, 192, 39);
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+   animation-delay: -0.9s;
+}
+
+@keyframes sk-cubemove {
+   25% {
+      transform: translateX(42px) rotate(-90deg) scale(0.5);
+   }
+
+   50% {
+      transform: translateX(42px) translateY(42px) rotate(-180deg);
+   }
+
+   75% {
+      transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+   }
+
+   100% {
+      transform: rotate(-360deg);
    }
 }
