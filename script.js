@@ -65,6 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
        
        formulario.appendChild(alertaExito);
 
+       setTimeout(() => {
+         alertaExito.remove();
+       }, 2000);
+
      }, 2000); // Simulación de envío durante 2 segundos
    }
  
